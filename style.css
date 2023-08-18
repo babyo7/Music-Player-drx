@@ -98,7 +98,7 @@ p{
 
 @media screen and (max-width: 800px) {
     .box {
-        margin-top: 0px;
+        margin-top: 3px;
         margin-bottom: 30px;
       width: 350px; 
       height: 600px;
