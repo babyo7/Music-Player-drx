@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="box">
+     <h1>Baby Music</h1>
+     <div class="music">
+      
+     </div>
+     <h2>Happier Than Ever</h2>
+     <p>Billie Eilish</p>
+     <input id="progress" type="range" value="0">  
+    <audio loop id="myAudio">
+    <source src="Music.mp3" type="audio/mp3">
+  </audio>
+     <div class="control">
+     <button id="btn1" style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="sec()"> 30</button>
+    
+     <button id="btn2" onclick="playAudio()" class="fa-solid fa-play"></button>
+    
+     <button id="btn3" style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="secd()"> 30</button>
+    
+    </div>
+
+    </div>
+    <script>
+        var cnt = 0;
+
+        
+        var x = document.getElementById("myAudio"); 
+        var y = document.getElementById("btn2"); 
+
+        function playAudio() { 
+            x.play(); 
+            y.className="fa-solid fa-pause";
+            cnt++;
+            if(cnt == 2)
+            {
+              x.pause();
+            
+              y.className="fa-solid fa-play";
+              cnt = 0;
+              x.currentTime = 0;
+              
+            }
+        }
+        
+        function sec() {
+            x.currentTime -= 30
+        }
+
+        function secd() {
+            x.currentTime += 30
+        }
+    </script>
+
+</body>
+</html>
