@@ -94,7 +94,7 @@ h1{
 }
 
 #progress{
-   
+    overflow: hidden;
     -webkit-appearance: none;
     background: bisque;
     border-radius: 3px;
