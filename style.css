@@ -111,7 +111,7 @@ h1{
     /* creating a custom design */
     height: 15px;
     width: 15px;
-    background: transparent;
+    background: black;
     border-radius: 50%;
     border: 2px solid #f50;
     /*  slider progress trick  */
