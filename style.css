@@ -21,14 +21,21 @@ body{
    flex-wrap: wrap;
    margin-bottom: 30px;
 }
-
+#loading{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 270px;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    filter: brightness(0%);
+}
 .control{
 
     margin-top: 0px;
 }
 
 .music{
-    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 350px;
     width: 340px;
@@ -87,7 +94,7 @@ h1{
 }
 
 #progress{
-   overflow:hidden;
+   
     -webkit-appearance: none;
     background: bisque;
     border-radius: 3px;
@@ -133,6 +140,7 @@ p{
         margin-bottom: -0px;
     }
     #progress{
+        overflow: hidden;
         margin-top: 7px;
         margin-bottom: 17px;
     }

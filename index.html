@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="box">
+    <div id="loading">
+        <img id="gta" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXU4dTg0cmMxZndzMTZ1M25wNDk4Y2lqanBkZGQzNmpsaG0xdHg2ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1z/XaejLonqk19jDugJbq/200.gif" />
+     
+    </div>
+    <div class="box" style="visibility: hidden;" id="box">
      <h1>Baby Music</h1>
-     <div class="music" id="mus">
+     <div class="music" id="mus" style="visibility: hidden;">
       
      </div>
      <h2 id="name" >Happier Than Ever</h2>
@@ -19,7 +23,7 @@
     <audio loop id="myAudio">
     <source src="Music.mp3" type="audio/mp3">
   </audio>
-     <div class="control">
+     <div class="control" style="visibility: hidden;" id="control">
      <button id="btn1" style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="prv()"></button>
     
      <button id="btn2" onclick="playAudio()" class="fa-solid fa-play"></button>
@@ -30,10 +34,14 @@
 
     </div>
     <script>
+
+        
+
         var cnt = 0;
         var nxt = 0;
 
         var prev = 0;
+        
 
         
         var x = document.getElementById("myAudio"); 
@@ -43,6 +51,20 @@
 
         var n =  document.getElementById("name");
         var a =  document.getElementById("artist");
+       
+        const myTimeout = setTimeout(wassup, 1100);
+
+function wassup() {
+    document.getElementById("loading").style.display="none";
+    document.getElementById("box").style.visibility="visible";
+    document.getElementById("mus").style.visibility="visible";
+    document.getElementById("control").style.visibility="visible";
+    
+
+}
+
+
+
         function playAudio() { 
             x.play(); 
             y.className="fa-solid fa-pause";
