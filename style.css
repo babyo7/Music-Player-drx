@@ -105,7 +105,7 @@ h1{
   /* Thumb: webkit */
   #progress::-webkit-slider-thumb {
     /* removing default appearance */
-   overflow:hidden
+   overflow:hidden;
     -webkit-appearance: none;
     appearance: none; 
     /* creating a custom design */
