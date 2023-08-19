@@ -92,7 +92,7 @@ h1{
 }
 
 #progress::-webkit-slider-thumb {
-   overflow:hidden
+   
     -webkit-appearance: none;
     background: black;
 
