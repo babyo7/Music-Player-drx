@@ -9,15 +9,15 @@
 </head>
 <body>
     <div id="loading">
-        <img id="gta" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXU4dTg0cmMxZndzMTZ1M25wNDk4Y2lqanBkZGQzNmpsaG0xdHg2ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1z/XaejLonqk19jDugJbq/200.gif" />
+        <img id="gta" loading="lazy" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXU4dTg0cmMxZndzMTZ1M25wNDk4Y2lqanBkZGQzNmpsaG0xdHg2ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1z/XaejLonqk19jDugJbq/200.gif" />
      
     </div>
-    <div class="box" style="visibility: hidden;" id="box">
+    <div class="box skeleton" style="visibility: hidden;" id="box">
      <h1>Baby Music</h1>
-     <div class="music" id="mus" style="visibility: hidden;">
+     <div class="music skeleton" id="mus" style="visibility: hidden;" >
       
      </div>
-     <h2 id="name" >Happier Than Ever</h2>
+     <h2 id="name">Happier Than Ever</h2>
      <p id="artist">Billie Eilish</p>
      <input id="progress" type="range" value="0">  
     <audio loop id="myAudio">
@@ -34,6 +34,14 @@
 
     </div>
     <script>
+        
+const allSkeleton = document.querySelectorAll('.skeleton')
+
+window.addEventListener('load', function() {
+  allSkeleton.forEach(item=> {
+    item.classList.remove('skeleton')
+  })
+})
 
         
 
