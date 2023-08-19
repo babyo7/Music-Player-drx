@@ -10,33 +10,39 @@
 <body>
     <div class="box">
      <h1>Baby Music</h1>
-     <div class="music">
+     <div class="music" id="mus">
       
      </div>
-     <h2>Happier Than Ever</h2>
-     <p>Billie Eilish</p>
+     <h2 id="name" >Happier Than Ever</h2>
+     <p id="artist">Billie Eilish</p>
      <input id="progress" type="range" value="0">  
     <audio loop id="myAudio">
     <source src="Music.mp3" type="audio/mp3">
   </audio>
      <div class="control">
-     <button id="btn1" style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="sec()"></button>
+     <button id="btn1" style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="prv()"></button>
     
      <button id="btn2" onclick="playAudio()" class="fa-solid fa-play"></button>
     
-     <button id="btn3" style="font-size: 10px;" class="fa-solid fa-angle-right" onclick="secd()"></button>
+     <button id="btn3" style="font-size: 10px;" class="fa-solid fa-angle-right" onclick="next()"></button>
     
     </div>
 
     </div>
     <script>
         var cnt = 0;
+        var nxt = 0;
+
+        var prev = 0;
 
         
         var x = document.getElementById("myAudio"); 
         var y = document.getElementById("btn2");
         var z =  document.getElementById("progress");
+        var m =  document.getElementById("mus");
 
+        var n =  document.getElementById("name");
+        var a =  document.getElementById("artist");
         function playAudio() { 
             x.play(); 
             y.className="fa-solid fa-pause";
@@ -46,9 +52,9 @@
               x.pause();
             
               y.className="fa-solid fa-play";
-              cnt = 0;
-              
+              cnt = 0; 
             }
+           
         }
         
         function sec() {
@@ -59,7 +65,82 @@
             x.currentTime += 30
         }
 
-z.max = x.duration;        // Set max value when you know the duration
+        function next(){
+            nxt++;
+            x.setAttribute('src','Music1.mp3');
+           cnt=  1;
+          
+            if(nxt==1){
+                x.play();
+                y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://images.hungama.com/c/1/219/c7e/95296825/95296825_300x300.jpg)";
+            n.innerText="Apna Bana Le";
+            a.innerText="Arijit Singh";
+            
+            
+         
+            }  
+         
+         else if (nxt==2){
+          
+            nxt++;
+            x.setAttribute('src','Music2.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
+            n.innerText="Dandelions";
+            a.innerText="Ruth B";
+            
+            
+         }
+         else if (nxt==4){
+            
+            x.setAttribute('src','Music.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
+            n.innerText="Happier Than Ever";
+            a.innerText="Billi Eilish";
+           nxt=0;
+         }
+        }
+
+        function prv(){
+            if (prev==0){
+                prev++;
+            x.setAttribute('src','Music2.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
+            n.innerText="Dandelions";
+            a.innerText="Ruth B";
+            }
+
+            else if(prev==1){
+            x.setAttribute('src','Music1.mp3');
+            prev++;
+           cnt=  1;
+                x.play();
+                y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://images.hungama.com/c/1/219/c7e/95296825/95296825_300x300.jpg)";
+            n.innerText="Apna Bana Le";
+            a.innerText="Arijit Singh";
+            }
+            else if(prev==2)
+            {
+                x.setAttribute('src','Music.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
+            n.innerText="Happier Than Ever";
+            a.innerText="Billi Eilish";
+           prev=0;
+
+            }
+            
+        }
+
+z.max  = x.duration;        // Set max value when you know the duration
 x.onloadedmetadata = () => z.max = x.duration;
 // update audio position
 x.onchange = () => z.currentTime = x.value;
