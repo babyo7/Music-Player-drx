@@ -86,12 +86,35 @@ h1{
     margin-bottom: 11px;
     cursor: pointer;
 }
+#progress::-webkit-meter-bar{
+    background: black;
+}
 
 #progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: black;
 
 }
+
+
+  
+  /* Track: Mozilla Firefox */
+
+  /* Thumb: webkit */
+  #progress::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none; 
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #f50;
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px #f50;
+  }
+
 p{
     margin-top: -17px;
 }
