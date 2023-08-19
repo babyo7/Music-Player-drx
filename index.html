@@ -34,7 +34,8 @@
 
         
         var x = document.getElementById("myAudio"); 
-        var y = document.getElementById("btn2"); 
+        var y = document.getElementById("btn2");
+        var z =  document.getElementById("progress");
 
         function playAudio() { 
             x.play(); 
@@ -57,6 +58,14 @@
         function secd() {
             x.currentTime += 30
         }
+
+        // Set max value when you know the duration
+x.onloadedmetadata = () => z.max = x.duration;
+// update audio position
+x.onchange = () => z.currentTime = x.value;
+// update range input when currentTime updates
+x.ontimeupdate = () => z.value = x.currentTime;
+
     </script>
 
 </body>
