@@ -77,6 +77,7 @@ h1{
 }
 
 #progress{
+   overflow: hidden;
     -webkit-appearance: none;
     background: bisque;
     border-radius: 3px;
@@ -91,6 +92,7 @@ h1{
 }
 
 #progress::-webkit-slider-thumb {
+   overflow:hidden
     -webkit-appearance: none;
     background: black;
 
@@ -103,6 +105,7 @@ h1{
   /* Thumb: webkit */
   #progress::-webkit-slider-thumb {
     /* removing default appearance */
+   overflow:hidden
     -webkit-appearance: none;
     appearance: none; 
     /* creating a custom design */
