@@ -132,6 +132,7 @@ p{
         margin-bottom: -0px;
     }
     #progress{
+        overflow:hidden;
         margin-top: 7px;
         margin-bottom: 17px;
     }
@@ -148,6 +149,7 @@ p{
     margin-top: 3px;
 
 }
+    
 
 
 }
