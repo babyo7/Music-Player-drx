@@ -59,7 +59,7 @@
             x.currentTime += 30
         }
 
-z.value=x.duration;        // Set max value when you know the duration
+z.max = x.duration;        // Set max value when you know the duration
 x.onloadedmetadata = () => z.max = x.duration;
 // update audio position
 x.onchange = () => z.currentTime = x.value;
