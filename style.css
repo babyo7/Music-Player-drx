@@ -292,7 +292,7 @@ h1{
         height: 100%;
         width: 100%;
         padding-top: 25px;
-        padding-bottom: 10px;
+        
         background: rgba(255, 255, 255, 0.77);
         backdrop-filter: blur(30%);
         padding-bottom: 30px;
