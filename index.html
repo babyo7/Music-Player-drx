@@ -9,18 +9,27 @@
 </head>
 <body>
     <div id="loading">
-        <img id="gta" loading="lazy" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXU4dTg0cmMxZndzMTZ1M25wNDk4Y2lqanBkZGQzNmpsaG0xdHg2ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1z/XaejLonqk19jDugJbq/200.gif" />
+        <img id="gta"  src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXU4dTg0cmMxZndzMTZ1M25wNDk4Y2lqanBkZGQzNmpsaG0xdHg2ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1z/XaejLonqk19jDugJbq/200.gif" />
      
     </div>
-    <div class="box skeleton" style="visibility: hidden;" id="box">
+    <div class="box" style="visibility: hidden;" id="box">
+        <nav>
+            <div class="outer">
+        <div class="circle">       
+        </div>
+        </div>
+        <div class="heading">
      <h1>Baby Music</h1>
-     <div class="music skeleton" id="mus" style="visibility: hidden;" >
+     </div>
+     </nav>
+
+     <div class="music" id="mus" style="visibility: hidden;" >
       
      </div>
      <h2 id="name">Happier Than Ever</h2>
      <p id="artist">Billie Eilish</p>
      <input id="progress" type="range" value="0">  
-    <audio loop id="myAudio">
+    <audio  id="myAudio">
     <source src="Music.mp3" type="audio/mp3">
   </audio>
      <div class="control" style="visibility: hidden;" id="control">
@@ -35,14 +44,6 @@
     </div>
     <script>
         
-const allSkeleton = document.querySelectorAll('.skeleton')
-
-window.addEventListener('load', function() {
-  allSkeleton.forEach(item=> {
-    item.classList.remove('skeleton')
-  })
-})
-
         
 
         var cnt = 0;
@@ -56,6 +57,7 @@ window.addEventListener('load', function() {
         var y = document.getElementById("btn2");
         var z =  document.getElementById("progress");
         var m =  document.getElementById("mus");
+        var ns = document.getElementById("btn3");
 
         var n =  document.getElementById("name");
         var a =  document.getElementById("artist");
@@ -70,6 +72,7 @@ function wassup() {
     
 
 }
+
 
 
 
@@ -167,6 +170,9 @@ function wassup() {
            prev=0;
 
             }
+            else if (Math.floor(x.duration)== Math.floor(z.max)){
+                btn3.click();
+            }
             
         }
 
@@ -176,6 +182,10 @@ x.onloadedmetadata = () => z.max = x.duration;
 x.onchange = () => z.currentTime = x.value;
 // update range input when currentTime updates
 x.ontimeupdate = () => z.value = x.currentTime;
+
+
+z.onchange = () => x.currentTime = z.value;
+x.onended = () => ns.click();
 
     </script>
 
