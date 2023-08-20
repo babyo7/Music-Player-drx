@@ -261,6 +261,7 @@ h1{
        
         height: 40px;
         width: 40px;
+    
         
     
     }
@@ -295,6 +296,9 @@ h1{
         padding-bottom: 30px;
     }
 
-    
+    nav{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
 }
     
