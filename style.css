@@ -135,76 +135,6 @@ h2{
 button{
     cursor: pointer;
 }
-@media screen and (max-width: 100px) {
-    .box {
-        margin-top: 30px;
-        margin-bottom: 30px;
-      width: 350px; 
-      height: 600px;
-
-    }
-    button{
-        color: black;
-    }
-    p{
-        margin-bottom: -0px;
-    }
-    #progress{
-       
-        margin-top: 7px;
-        margin-bottom: 17px;
-    }
-    .music{
-        height: 300px;
-        width: 300px;
-        margin-bottom: 0px;
-        margin-top: 0px;
-    }
-   h1{
-
-
-    margin-top: 19px;
-    margin-bottom: 10px;
-   
-   }
-   #dur{
-    margin-top: 3px;
-
-}
-
-.outer{
-    margin-right: -30px;
-    margin-left: -10px;
-    padding-left: 10px;
-    align-content: center;
-   
-}
-.circle{
-   
-    height: 30px;
-    width: 30px;
-    
-
-}
-
-.right-outer{
-    margin-left: -25px;
-}
-
-.heading{
- margin-left: 10px;
-
-}
-#playlist button{
-    border-radius: 10px;
-    backdrop-filter: blur(30px);
-    color: black;
-    width: 10px;
-    color: black;
-    margin-bottom: 15px;
-
-}
-}
 
 
 
@@ -259,8 +189,8 @@ h1{
 
     #playlist{
         overflow: scroll;
-        height: 350px;
-        width: 340px;
+        height: 100%;
+        width: 100%;
         padding-top: 20px;
         backdrop-filter: blur(50px);
         filter: blur(100%);
@@ -280,3 +210,83 @@ h1{
     #playlist button:hover{
         background-color: white;
     }
+
+
+
+    @media screen and (max-width: 800px) {
+        .box {
+            margin-top: 30px;
+            margin-bottom: 30px;
+          width: 350px; 
+          height: 600px;
+    
+        }
+        button{
+            color: black;
+        }
+        p{
+            margin-bottom: -0px;
+        }
+        #progress{
+           
+            margin-top: 7px;
+            margin-bottom: 17px;
+        }
+        .music{
+            height: 300px;
+            width: 300px; 
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+       h1{
+    
+    
+        margin-top: 19px;
+        margin-bottom: 10px;
+       
+       }
+       #dur{
+        margin-top: 3px;
+    
+    }
+    
+    .outer{
+        margin-right: -30px;
+        margin-left: -10px;
+        padding-left: 10px;
+        align-content: center;
+       
+    }
+    .circle{
+       
+        height: 30px;
+        width: 30px;
+        
+    
+    }
+    
+    .right-outer{
+        margin-left: -25px;
+    }
+    
+    .heading{
+     margin-left: 10px;
+    
+    }
+   
+    #playlist button{
+        border-radius: 10px;
+        backdrop-filter: blur(30px);
+        color: black;
+        width: 260px;
+        color: black;
+    
+        margin-bottom: 15px;
+    
+    }
+    #playlist{
+        
+    }
+
+    }
+    
