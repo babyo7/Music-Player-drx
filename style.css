@@ -289,9 +289,7 @@ h1{
         height: 100%;
         width: 100%;
         padding-top: 20px;
-        background-color: rgba(0, 0, 0, 0.414);
-        backdrop-filter: blur(50px);
-        filter: blur(100%);
+        background-image: url(https://www.pngmart.com/files/16/Blur-PNG-Picture.png);
         padding-bottom: 30px;
     }
 
