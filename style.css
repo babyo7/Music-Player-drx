@@ -16,13 +16,7 @@ body{
     margin: auto;
    margin-top: 23px;
    padding-top: 1px;
-   
-   -webkit-backface-visibility: hidden;
--moz-backface-visibility: hidden;
--webkit-transform: translate3d(0, 0, 0);
--moz-transform: translate3d(0, 0, 0);
 
-z-index: 1;
    
    
    text-align: center;
@@ -301,12 +295,25 @@ h1{
         height: 100%;
         width: 100%;
         padding-top: 25px;
+      
+      
+   -webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+
+z-index: 1;
+      
+      
         -moz-filter: blur(70%);
    -ms-filter: blur(70%);
         -webkit-backdrop-filter: blur(70%);
         padding-bottom: 30px;
        -webkit-filter:blur(70%);
       transform: translate3d(0, 0, 0);
+      
+      
+      
       
     }
 
