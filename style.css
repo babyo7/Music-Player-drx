@@ -135,7 +135,7 @@ h2{
 button{
     cursor: pointer;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 100px) {
     .box {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -195,7 +195,15 @@ button{
  margin-left: 10px;
 
 }
+#playlist button{
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    color: black;
+    width: 10px;
+    color: black;
+    margin-bottom: 15px;
 
+}
 }
 
 
@@ -247,4 +255,28 @@ h1{
         background-image: url(s.png);
         cursor: pointer;
       
+    }
+
+    #playlist{
+        overflow: scroll;
+        height: 350px;
+        width: 340px;
+        padding-top: 20px;
+        backdrop-filter: blur(50px);
+        filter: blur(100%);
+        padding-bottom: 30px;
+    }
+
+    #playlist button{
+        border-radius: 10px;
+        backdrop-filter: blur(30px);
+        color: black;
+        width: 300px;
+        color: black;
+        margin-bottom: 15px;
+    
+    }
+
+    #playlist button:hover{
+        background-color: white;
     }

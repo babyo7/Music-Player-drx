@@ -19,7 +19,7 @@
         </div>
         </div>
         <div class="heading">
-     <h1>Baby Music</h1>
+     <h1 id="Baby">Baby Music</h1>
      </div>
      <div class="right-outer">
         <div class="right-circle" id="shareBtn">       
@@ -29,13 +29,23 @@
      </nav>
 
      <div class="music" id="mus" style="visibility: hidden;" >
-      
+        <div id="playlist" style="visibility: hidden;">
+            <button id="Billi">Happier Than Ever - Billi Eilish</button>
+            <button id="Arijit">Apna Bana Le - Arijit Singh</button>
+            <button id="Ruth">Dandelions - Ruth B</button>
+            
+            
+   
+        </div>
+   
      </div>
+     <div id="hide">
      <h2 id="name">Happier Than Ever</h2>
      <p id="artist">Billie Eilish</p>
+     </div>
      <input id="progress" type="range" value="0">  
     <audio  id="myAudio">
-    <source src="Music.mp3" type="audio/mp3">
+    <source src="Music/Music.mp3" type="audio/mp3">
   </audio>
      <div class="control" style="visibility: hidden;" id="control">
      <button id="btn1" style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="prv()"></button>
@@ -47,7 +57,9 @@
     </div>
 
     </div>
-    <script>
+   
+   
+   <script>
         
         
 
@@ -57,7 +69,8 @@
         var prev = 0;
         
 
-        
+        var t =  document.getElementById("test");
+       
         var x = document.getElementById("myAudio"); 
         var y = document.getElementById("btn2");
         var z =  document.getElementById("progress");
@@ -66,6 +79,13 @@
 
         var n =  document.getElementById("name");
         var a =  document.getElementById("artist");
+        var p=  document.getElementById("playlist");
+       
+        var billi=  document.getElementById("Billi");
+        var arijit=  document.getElementById("Arijit");
+        var ruth=  document.getElementById("Ruth");
+
+        var hide=  document.getElementById("hide");
        
         const myTimeout = setTimeout(wassup, 1100);
 
@@ -105,7 +125,7 @@ function wassup() {
 
         function next(){
             nxt++;
-            x.setAttribute('src','Music1.mp3');
+            x.setAttribute('src','Music/Music1.mp3');
            cnt=  1;
           
             if(nxt==1){
@@ -122,7 +142,7 @@ function wassup() {
          else if (nxt==2){
           
             nxt++;
-            x.setAttribute('src','Music2.mp3');
+            x.setAttribute('src','Music/Music2.mp3');
            x.play();
            y.className="fa-solid fa-pause";
             m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
@@ -133,7 +153,7 @@ function wassup() {
          }
          else if (nxt==4){
             
-            x.setAttribute('src','Music.mp3');
+            x.setAttribute('src','Music/Music.mp3');
            x.play();
            y.className="fa-solid fa-pause";
             m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
@@ -146,7 +166,7 @@ function wassup() {
         function prv(){
             if (prev==0){
                 prev++;
-            x.setAttribute('src','Music2.mp3');
+            x.setAttribute('src','Music/Music2.mp3');
            x.play();
            y.className="fa-solid fa-pause";
             m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
@@ -155,7 +175,7 @@ function wassup() {
             }
 
             else if(prev==1){
-            x.setAttribute('src','Music1.mp3');
+            x.setAttribute('src','Music/Music1.mp3');
             prev++;
            cnt=  1;
                 x.play();
@@ -166,7 +186,7 @@ function wassup() {
             }
             else if(prev==2)
             {
-                x.setAttribute('src','Music.mp3');
+                x.setAttribute('src','Music/Music.mp3');
            x.play();
            y.className="fa-solid fa-pause";
             m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
@@ -189,10 +209,53 @@ x.onchange = () => z.currentTime = x.value;
 x.ontimeupdate = () => z.value = x.currentTime;
 
 
+function billie() {
+    x.setAttribute('src','Music/Music.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
+            n.innerText="Happier Than Ever";
+            a.innerText="Billi Eilish";
+}
+function ruthe(){
+    x.setAttribute('src','Music/Music2.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
+            n.innerText="Dandelions";
+            a.innerText="Ruth B";
+}
+
+function arijite(){
+    x.setAttribute('src','Music/Music1.mp3');
+    x.play();
+                y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://images.hungama.com/c/1/219/c7e/95296825/95296825_300x300.jpg)";
+            n.innerText="Apna Bana Le";
+            a.innerText="Arijit Singh";
+            
+
+}
+
+function hiddee(){
+
+    p.style.visibility="none";
+}
+
 z.onchange = () => x.currentTime = z.value;
 x.onended = () => ns.click();
 x.onpause = () =>   y.className="fa-solid fa-play";
 x.onplay= () =>   y.className="fa-solid fa-pause";
+
+m.onclick = () => p.style.visibility="visible";
+
+
+hide.onclick = () => p.style.visibility="hidden";
+
+billi.onclick = () =>  billie();
+arijit.onclick = () => arijite();
+ruth.onclick = () => ruthe();
+
 
 
 const shareBtn = document.getElementById('shareBtn')
