@@ -135,7 +135,7 @@ h2{
 button{
     cursor: pointer;
 }
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 800px) {
     .box {
         margin-top: 30px;
         margin-bottom: 30px;
