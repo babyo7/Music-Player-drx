@@ -289,7 +289,7 @@ h1{
         height: 100%;
         width: 100%;
         padding-top: 20px;
-        background-color: rgba(255, 255, 255, 0.622);
+        background-color: rgba(0, 0, 0, 0.611);
         backdrop-filter: blur(50px);
         filter: blur(100%);
         padding-bottom: 30px;
