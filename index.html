@@ -203,7 +203,7 @@ shareBtn.addEventListener('click', event => {
   if (navigator.share) {
     // Browser supports native share api
     navigator.share({
-      text: '${title}',
+      title: '${title}',
       url: '${url}'
     }).then(() => {
       console.log('Thanks for sharing!');
