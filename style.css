@@ -302,4 +302,39 @@ h1{
         margin-top: 10px;
     }
 }
+
+.slide{
+    
+animation-duration: 1.3s;
+animation-name: s;
+
+
+}
+@keyframes s{
+0%{
+   margin-top: 100%;
+}
+100%{
+   margin-bottom: 0%;
+}
+}
+
+.down{
+    
+    animation-duration: 1.9s;
+    animation-name: d;
+    animation-fill-mode: forwards;
+    
+    
+    }
+    @keyframes d{
+    0%{
+        padding-top: 0%;
+     
+    }
+    100%{
+       margin-top: 130%;
+      
+    }
+    }
     

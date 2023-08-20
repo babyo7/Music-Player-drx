@@ -29,7 +29,7 @@
      </nav>
 
      <div class="music" id="mus" style="visibility: hidden;" >
-        <div id="playlist" style="visibility: hidden;">
+        <div id="playlist" class="p"  style="visibility: hidden;">
             <button id="Billi">Happier Than Ever - Billi Eilish</button>
             <button id="Arijit">Apna Bana Le - Arijit Singh</button>
             <button id="Ruth">Dandelions - Ruth B</button>
@@ -48,11 +48,11 @@
     <source src="Music/Music.mp3" type="audio/mp3">
   </audio>
      <div class="control" style="visibility: hidden;" id="control">
-     <button id="btn1" style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="prv()"></button>
+     <button id="btn1"  style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="prv()"></button>
     
-     <button id="btn2" onclick="playAudio()" class="fa-solid fa-play"></button>
+     <button id="btn2"  onclick="playAudio()" class="fa-solid fa-play"></button>
     
-     <button id="btn3" style="font-size: 10px;" class="fa-solid fa-angle-right" onclick="next()"></button>
+     <button id="btn3"  style="font-size: 10px;" class="fa-solid fa-angle-right" onclick="next()"></button>
     
     </div>
 
@@ -61,8 +61,8 @@
    
    <script>
         
-        
 
+      
         var cnt = 0;
         var nxt = 0;
 
@@ -87,6 +87,8 @@
 
         var hide=  document.getElementById("hide");
        
+        
+
         const myTimeout = setTimeout(wassup, 1100);
 
 function wassup() {
@@ -208,6 +210,21 @@ x.onchange = () => z.currentTime = x.value;
 // update range input when currentTime updates
 x.ontimeupdate = () => z.value = x.currentTime;
 
+m.onclick =() => rste();
+hide.onclick =() => rst();
+
+function rst(){
+    p.classList.remove("slide");
+    p.classList.add("down");
+    
+}
+
+function rste(){
+    
+    p.style.visibility="visible";
+    p.classList.remove("down");
+    p.classList.add("slide");
+}
 
 function billie() {
     
@@ -250,10 +267,9 @@ x.onended = () => ns.click();
 x.onpause = () =>   y.className="fa-solid fa-play";
 x.onplay= () =>   y.className="fa-solid fa-pause";
 
-m.onclick = () => p.style.visibility="visible";
 
 
-hide.onclick = () => p.style.visibility="hidden";
+
 
 billi.onclick = () =>  billie();
 arijit.onclick = () => arijite();
