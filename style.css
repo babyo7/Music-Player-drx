@@ -295,6 +295,7 @@ h1{
         background: rgba(255, 255, 255, 0.77);
         backdrop-filter: blur(30%);
         padding-bottom: 30px;
+        filter: blur(70%);
     }
 
     nav{
