@@ -16,9 +16,6 @@ body{
     margin: auto;
    margin-top: 23px;
    padding-top: 1px;
-
-   
-   
    text-align: center;
    border-radius: 30px;
    box-shadow: 10cap;
@@ -69,7 +66,6 @@ button{
     height: 40px;
     width: 40px;
     border-radius: 100%;
-   
 
 }
 #btn1{
@@ -93,7 +89,6 @@ button:hover{
 
 h2{
     font-weight: 300;
-    
 }
 
 #btn5{
@@ -128,7 +123,6 @@ h2{
     border: 2px solid bisque;
     /*  slider progress trick  */
     box-shadow: -407px 0 0 400px #f50;
-
   }
 
 p{
@@ -169,11 +163,10 @@ nav{
 }
 h1{
     font-weight: 500;
-    margin-left: -10px;
+    margin-left: 10px;
     font-size: 27px;
      margin-top: 23px;
     margin-bottom: -10px;
-    margin-left: -5px;
     cursor: default;
     }
 
@@ -181,7 +174,7 @@ h1{
         border-radius: 50%;
        
       margin-top: 23px;
-      margin-left: 22px;
+      margin-left: 40px;
         height: 40px;
         width: 40px;
         margin-bottom: -10px;
@@ -208,19 +201,14 @@ h1{
         border-radius: 10px;
         backdrop-filter: blur(30px);
         color: black;
-        width: 260px;
+        width: 300px;
         color: black;
-        background-color: blanchedalmond;
         margin-bottom: 15px;
     
-    
-    }
-    #playlist button:hover{
-        background-color: white;
     }
 
-    .heading{
-        text-align: center;
+    #playlist button:hover{
+        background-color: white;
     }
 
 
@@ -264,14 +252,10 @@ h1{
     
     .outer{
         margin-right: -30px;
-        margin-left: -12px;
+        margin-left: -10px;
         padding-left: 10px;
         align-content: center;
        
-    }
-    h1{
-        margin-left: 6px;
-        font-size: 25px;
     }
     .circle{
        
@@ -282,10 +266,9 @@ h1{
     
     }
     
-    
     .right-outer{
-        margin-left: -13px;
-        margin-top: -5px;
+        margin-left: -25px;
+        margin-top: -3px;
     }
     
     .heading{
@@ -309,26 +292,10 @@ h1{
         height: 100%;
         width: 100%;
         padding-top: 25px;
-      
-      
-   -webkit-backface-visibility: hidden;
--moz-backface-visibility: hidden;
--webkit-transform: translate3d(0, 0, 0);
--moz-transform: translate3d(0, 0, 0);
 
-z-index: 1;
-      
-      
-        -moz-filter: blur(70%);
-   -ms-filter: blur(70%);
-        -webkit-backdrop-filter: blur(70%);
+        -webkit-backdrop-filter: blur(30%);
         padding-bottom: 30px;
        -webkit-filter:blur(70%);
-      transform: translate3d(0, 0, 0);
-      
-      
-      
-      
     }
 
     nav{
