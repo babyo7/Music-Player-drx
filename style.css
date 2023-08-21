@@ -9,9 +9,7 @@ body{
     background-color: antiquewhite;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
+
 
 
 .box{
