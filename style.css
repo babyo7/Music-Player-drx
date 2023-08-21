@@ -232,6 +232,8 @@ h1{
             margin-bottom: 30px;
           width: 350px; 
           height: 600px;
+          margin-left: 10px;
+          margin-right: 10px;
     
         }
         button{
