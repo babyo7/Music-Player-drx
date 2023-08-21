@@ -196,6 +196,17 @@ h1{
         filter: blur(100%);
         padding-bottom: 30px;
     }
+   
+   
+    #playlist:before {
+        overflow: scroll;
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+        backdrop-filter: blur(50px);
+        filter: blur(100%);
+        padding-bottom: 30px;
+    }
 
     #playlist button{
         border-radius: 10px;
