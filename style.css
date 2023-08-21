@@ -2,6 +2,9 @@
 *{
     font-family: 'Poppins', sans serif;
 
+        scrollbar-width: none;
+
+
 }
 
 body{
@@ -16,6 +19,7 @@ body::-webkit-scrollbar{
 #playlist::-webkit-scrollbar{
     display: none;
   }
+  
 
 
 .box{
@@ -135,6 +139,22 @@ h2{
     box-shadow: -407px 0 0 400px #f50;
   }
 
+  #progress::-moz-range-thumb {
+    /* removing default appearance */
+   
+    -webkit-appearance: none;
+    appearance: none; 
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background: bisque;
+    border-radius: 50%;
+    border: 2px solid bisque;
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px #f50;
+  }
+  
+
 p{
     margin-top: -17px;
     cursor: default;
@@ -205,6 +225,10 @@ h1{
         backdrop-filter: blur(50px);
         filter: blur(100%);
         padding-bottom: 30px;
+        -webkit-filter: blur(100%);
+-moz-filter: blur(100%);
+-ms-filter: blur(100%);
+filter: blur(100%);
     }
    
    
@@ -310,9 +334,12 @@ h1{
         width: 100%;
         padding-top: 25px;
 background-color: rgba(255, 255, 255, .15);
-        -webkit-backdrop-filter: blur(30%);
-        padding-bottom: 30px;
-       -webkit-filter:blur(70%);
+-webkit-filter: blur(100%);
+-moz-filter: blur(100%);
+-ms-filter: blur(100%);
+filter: blur(100%);
+
+
     }
 
     nav{
