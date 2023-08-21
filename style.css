@@ -295,7 +295,7 @@ h1{
         height: 100%;
         width: 100%;
         padding-top: 25px;
-
+background-color: rgba(255, 255, 255, .15);
         -webkit-backdrop-filter: blur(30%);
         padding-bottom: 30px;
        -webkit-filter:blur(70%);
