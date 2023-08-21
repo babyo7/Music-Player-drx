@@ -226,7 +226,7 @@ h1{
 
 
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         .box {
             margin-top: 30px;
             margin-bottom: 30px;
