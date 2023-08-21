@@ -45,7 +45,7 @@ body{
 }
 
 .music{
-    
+    backdrop-filter: blur(100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 350px;
     width: 340px;
@@ -54,7 +54,7 @@ body{
     text-align: center;
     background-position: center;
     background-size: cover;
-    filter: blur(100%);
+    
     background-image:  url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg);
     overflow: hidden;
     
