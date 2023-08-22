@@ -110,6 +110,18 @@ function kill(){
         var mobile = window.matchMedia("(max-width: 1000px)")
 myFunction(mobile) // Call listener function at run time
 mobile.addListener(myFunction) // Attach listener function on state changes 
+
+function shows(){
+    document.getElementById("nav").style.marginBottom="";
+    document.getElementById("nav").style.marginTop="";
+pp.style.display="none";
+    users=0;
+   
+      
+}
+
+
+        const myTimeout = setTimeout(wassup, 1100);
        
 
 
@@ -186,21 +198,10 @@ n.style.visibility="visible";
 z.style.visibility="visible";
 
 
-setTimeout(shows, 1700);
+setTimeout(shows, 1900);
 
 }
 
-function shows(){
-    document.getElementById("nav").style.marginBottom="";
-    document.getElementById("nav").style.marginTop="";
-pp.style.display="none";
-    users=0;
-   
-      
-}
-
-
-        const myTimeout = setTimeout(wassup, 1100);
 
 function wassup() {
     document.getElementById("loading").style.display="none";
