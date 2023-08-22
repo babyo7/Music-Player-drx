@@ -152,6 +152,7 @@ function show() {
     pp.classList.add("downs");
     document.getElementById("nav").style.marginBottom="";
     document.getElementById("nav").style.marginTop="-1300px";
+
     document.getElementById("mus").style.visibility="visible";
     document.getElementById("control").style.visibility="visible";
     document.getElementById("nav").style.visibility="visible";
@@ -163,7 +164,29 @@ function show() {
     setTimeout(shows, 1600);
 
 }
-        
+       
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes 
+
+function myFunction(x) {
+
+pp.classList.remove("slide");
+pp.classList.add("downs");
+document.getElementById("nav").style.marginBottom="";
+document.getElementById("nav").style.marginTop="-1190px";
+
+document.getElementById("mus").style.visibility="visible";
+document.getElementById("control").style.visibility="visible";
+document.getElementById("nav").style.visibility="visible";
+a.style.visibility="visible";
+n.style.visibility="visible";
+z.style.visibility="visible";
+
+
+setTimeout(shows, 1700);
+
+}
 
 function shows(){
     document.getElementById("nav").style.marginBottom="";
