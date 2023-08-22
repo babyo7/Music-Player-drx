@@ -33,10 +33,7 @@
             <button id="Billi">Happier Than Ever - Billi Eilish</button>
             <button id="Arijit">Apna Bana Le - Arijit Singh</button>
             <button id="Ruth">Dandelions - Ruth B</button>
-            
-            
-            
-            
+
    
         </div>
    
@@ -50,7 +47,7 @@
     <source src="Music/Music.mp3" type="audio/mp3">
   </audio>
      <div class="control" style="visibility: hidden;" id="control">
-     <button id="btn1"  style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="prv()"></button>
+     <button id="btn1"  style="font-size: 10px;" class="fa-solid fa-angle-left" onclick="nexte()"></button>
     
      <button id="btn2"  onclick="playAudio()" class="fa-solid fa-play"></button>
     
@@ -196,6 +193,8 @@ switch(nxt)
         function secd() {
             x.currentTime += 30
         }
+
+       
 
 z.max  = x.duration;        // Set max value when you know the duration
 x.onloadedmetadata = () => z.max = x.duration;
