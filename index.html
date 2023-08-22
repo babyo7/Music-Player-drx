@@ -106,6 +106,7 @@ function kill(){
         var ruth=  document.getElementById("Ruth");
         var baby=  document.getElementById("Baby");
         var hide=  document.getElementById("hide");
+
         var mobile = window.matchMedia("(max-width: 1000px)")
 myFunction(mobile) // Call listener function at run time
 mobile.addListener(myFunction) // Attach listener function on state changes 
@@ -147,7 +148,7 @@ default:
 }
         }
 
-document.getElementById("close").onclick =()=> show();
+document.getElementById("close").onclick =()=> {show(); myFunction();}
 
 function show() {
 
