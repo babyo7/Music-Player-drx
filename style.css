@@ -309,6 +309,26 @@ filter: blur(100%);
     @media screen and (max-width: 1000px) {
         
       
+
+    .downs{
+    
+        animation-duration: 1.9s;
+        animation-name: d;
+        animation-fill-mode: forwards;
+        
+        
+        }
+        @keyframes d{
+        0%{
+            padding-top: 0%;
+         
+        }
+        100%{
+           margin-top: 200%;
+          
+        }
+        }
+    
         .box {
             margin-top: 30px;
             margin-bottom: 30px;
