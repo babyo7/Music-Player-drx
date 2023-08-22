@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body id="body">
     <div id="loading">
         <img id="gta"  src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXU4dTg0cmMxZndzMTZ1M25wNDk4Y2lqanBkZGQzNmpsaG0xdHg2ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1z/XaejLonqk19jDugJbq/200.gif" />
-     
     </div>
+ 
+    
+  
+
     <div class="box" style="visibility: hidden;" id="box">
-        <nav>
+        <div id="playlists" class="pp" style="display: none;">
+            <button id="Billi">Happier Than Ever - Billi Eilish</button>
+            <button id="Arijit">Apna Bana Le - Arijit Singh</button>
+            <button id="close">close</button>
+    
+        </div>
+        
+       
+        <nav id="nav" class="mov">
             <div class="outer">
         <div class="circle shine" id="circle">       
         </div>
@@ -25,6 +36,7 @@
         <div class="right-circle" id="shareBtn">       
         </div>
         </div>
+        
 
      </nav>
 
@@ -36,6 +48,7 @@
 
    
         </div>
+        
    
      </div>
      <div id="hide">
@@ -87,14 +100,80 @@ function kill(){
         var n =  document.getElementById("name");
         var a =  document.getElementById("artist");
         var p=  document.getElementById("playlist");
-       
+        var pp=  document.getElementById("playlists");
         var billi=  document.getElementById("Billi");
         var arijit=  document.getElementById("Arijit");
         var ruth=  document.getElementById("Ruth");
-
+        var baby=  document.getElementById("Baby");
         var hide=  document.getElementById("hide");
        
+
+
+        users=0;
+        baby.onclick = ()=>{
+            users++;
+            user();
+            console.log(users);
+        }
+
+        function user(){
+
+switch(users){
+
+        case 1:
+        pp.classList.remove("downs");
+       pp.classList.add("slide");
+       pp.style.display="block";
+     
+       
+       document.getElementById("nav").classList.remove("mov");
+       document.getElementById("nav").classList.add("slide");
+       
+       document.getElementById("nav").style.marginBottom="-1400px";
+       
+    
+
+  
+    a.style.visibility="hidden";
+    n.style.visibility="hidden";
+    z.style.visibility="hidden";
+    break;
+default:
+    users=0;
+
+}
+        }
+
+document.getElementById("close").onclick =()=> show();
+
+function show() {
+
+    pp.classList.remove("slide");
+    pp.classList.add("downs");
+    document.getElementById("nav").style.marginBottom="";
+    document.getElementById("nav").style.marginTop="-1300px";
+    document.getElementById("mus").style.visibility="visible";
+    document.getElementById("control").style.visibility="visible";
+    document.getElementById("nav").style.visibility="visible";
+    a.style.visibility="visible";
+    n.style.visibility="visible";
+    z.style.visibility="visible";
+
+
+    setTimeout(shows, 1600);
+
+}
         
+
+function shows(){
+    document.getElementById("nav").style.marginBottom="";
+    document.getElementById("nav").style.marginTop="";
+pp.style.display="none";
+    users=0;
+   
+      
+}
+
 
         const myTimeout = setTimeout(wassup, 1100);
 
