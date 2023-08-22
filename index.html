@@ -19,6 +19,7 @@
     <div class="box" style="visibility: hidden;" id="box">
         <div id="playlists" class="pp" style="display: none;">
             <button id="Happy">Ridezzz - By Happy</button>
+            <button id="Github">View Code - Github</button>
             <button id="close">Close</button>
     
         </div>
@@ -82,6 +83,8 @@ function kill(){
     document.getElementById("mus").classList.remove("shine");
     document.getElementById("circle").classList.remove("shine");
 }
+
+document.getElementById("circle").onclick = () => window.location.href="https://www.instagram.com/babyo7_/";
       
         var cnt = 0;
         var nxt = 0;
@@ -107,7 +110,9 @@ function kill(){
         var baby=  document.getElementById("Baby");
         var hide=  document.getElementById("hide");
         var happy=  document.getElementById("Happy");
+        var github=  document.getElementById("Github");
 
+        github.onclick = () => window.location.href="https://github.com/babyo7";
         var mobile = window.matchMedia("(max-width: 800px)")
 myFunction(mobile) // Call listener function at run time
 mobile.addListener(myFunction) // Attach listener function on state changes 
