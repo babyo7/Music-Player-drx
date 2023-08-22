@@ -176,21 +176,35 @@ switch(nxt)
 }
 
 
+function playAudio(){
+    cnt++;
+playaudio();
+console.log(cnt);
+}
 
 
 
+        function playaudio() { 
 
-        function playAudio() { 
+
+            switch(cnt){
+
+            case 1:
+          
             x.play(); 
             y.className="fa-solid fa-pause";
-            cnt++;
-            if(cnt == 2)
-            {
-              x.pause();
+            break;
+
+            default:
+                cnt=0;
+            x.pause();
             
-              y.className="fa-solid fa-play";
-              cnt = 0; 
+            y.className="fa-solid fa-play";
+
+
+          
             }
+            
            
         }
         
