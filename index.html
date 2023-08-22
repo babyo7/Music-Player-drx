@@ -17,9 +17,8 @@
 
     <div class="box" style="visibility: hidden;" id="box">
         <div id="playlists" class="pp" style="display: none;">
-            <button id="Billi">Happier Than Ever - Billi Eilish</button>
-            <button id="Arijit">Apna Bana Le - Arijit Singh</button>
-            <button id="close">close</button>
+            <button id="Happy">Ridezzz - By Happy</button>
+            <button id="close">Close</button>
     
         </div>
         
@@ -106,23 +105,26 @@ function kill(){
         var ruth=  document.getElementById("Ruth");
         var baby=  document.getElementById("Baby");
         var hide=  document.getElementById("hide");
+        var happy=  document.getElementById("Happy");
 
-        var mobile = window.matchMedia("(max-width: 1000px)")
+        var mobile = window.matchMedia("(max-width: 800px)")
 myFunction(mobile) // Call listener function at run time
 mobile.addListener(myFunction) // Attach listener function on state changes 
 
-function shows(){
-    document.getElementById("nav").style.marginBottom="";
-    document.getElementById("nav").style.marginTop="";
-pp.style.display="none";
-    users=0;
-   
-      
-}
 
+happy.onclick = ()=> window.location.href="https://happy-music.vercel.app";
 
         const myTimeout = setTimeout(wassup, 1100);
+        const time = setTimeout(shows, 1100);
        
+        function wassup() {
+    document.getElementById("loading").style.display="none";
+    document.getElementById("box").style.visibility="visible";
+    document.getElementById("mus").style.visibility="visible";
+    document.getElementById("control").style.visibility="visible";
+    
+
+}
 
 
         users=0;
@@ -181,6 +183,14 @@ function show() {
 
 }
        
+function shows(){
+    document.getElementById("nav").style.marginBottom="";
+    document.getElementById("nav").style.marginTop="";
+pp.style.display="none";
+    users=0;
+   
+      
+}
 
 
 function myFunction(mobile) {
@@ -203,14 +213,7 @@ setTimeout(shows, 1900);
 }
 
 
-function wassup() {
-    document.getElementById("loading").style.display="none";
-    document.getElementById("box").style.visibility="visible";
-    document.getElementById("mus").style.visibility="visible";
-    document.getElementById("control").style.visibility="visible";
-    
 
-}
 
 
 

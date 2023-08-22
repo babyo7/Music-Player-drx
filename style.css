@@ -10,6 +10,7 @@
 body{
 
     background-color: antiquewhite;
+    text-transform: capitalize;
 }
 
 body::-webkit-scrollbar{
@@ -324,7 +325,7 @@ filter: blur(100%);
          
         }
         100%{
-           margin-top: 360%;
+           margin-top: 160%;
           
         }
         }
