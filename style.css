@@ -312,7 +312,7 @@ filter: blur(100%);
 
     .downs{
     
-        animation-duration: 1.6s;
+        animation-duration: 1.3s;
         animation-name: d;
         animation-fill-mode: forwards;
         
