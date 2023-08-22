@@ -162,9 +162,13 @@ default:
 }
         }
 
-document.getElementById("close").onclick =()=> {show(); myFunction();}
+document.getElementById("close").onclick =()=> {show(); }
 
 function show() {
+    if( /android|iphone/i.test(navigator.userAgent)){
+        myFunction(mobile);
+    }
+    else{
 
     pp.classList.remove("slide");
     pp.classList.add("downs");
@@ -180,6 +184,7 @@ function show() {
 
 
     setTimeout(shows, 1600);
+    }
 
 }
        
