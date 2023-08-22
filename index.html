@@ -33,13 +33,7 @@
             <button id="Billi">Happier Than Ever - Billi Eilish</button>
             <button id="Arijit">Apna Bana Le - Arijit Singh</button>
             <button id="Ruth">Dandelions - Ruth B</button>
-            <button id="Ruth">Adding Soon</button>
-            <button id="Ruth">Adding Soon</button>
-            <button id="Ruth">Adding Soon</button>
-            <button id="Ruth">Adding Soon</button>
-            <button id="Ruth">Adding Soon</button>
-            <button id="Ruth">Adding Soon</button>
-            <button id="Ruth">Adding Soon</button>
+            
             
             
             
@@ -60,7 +54,7 @@
     
      <button id="btn2"  onclick="playAudio()" class="fa-solid fa-play"></button>
     
-     <button id="btn3"  style="font-size: 10px;" class="fa-solid fa-angle-right" onclick="next()"></button>
+     <button id="btn3"  style="font-size: 10px;" class="fa-solid fa-angle-right" onclick="tests()"></button>
     
     </div>
 
@@ -110,6 +104,76 @@ function wassup() {
 
 
 
+function tests(){
+    nxt++;
+    songs();
+    
+console.log(nxt);
+    
+
+}
+
+function  prv(){
+    nxt--;
+    songs();
+    
+console.log(nxt);
+
+
+}
+
+
+
+function songs(){
+
+
+switch(nxt)
+{
+
+
+    case 1:
+
+    x.setAttribute('src','Music/Music1.mp3');
+    x.play();
+                y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://images.hungama.com/c/1/219/c7e/95296825/95296825_300x300.jpg)";
+            n.innerText="Apna Bana Le";
+            a.innerText="Arijit Singh";
+            document.title="Apna Bana Le - Arijit Singh";
+
+    
+        break;
+
+        case 2:
+        x.setAttribute('src','Music/Music2.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
+            n.innerText="Dandelions";
+            a.innerText="Ruth B";
+            document.title="Dandelions - Ruth B";
+        
+            break;
+            
+            default:    
+            x.setAttribute('src','Music/Music.mp3');
+           x.play();
+           y.className="fa-solid fa-pause";
+            m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
+            n.innerText="Happier Than Ever";
+            a.innerText="Billi Eilish";
+           nxt=0;
+           document.title="Happier Than Ever - Billi Eilish";
+               
+
+                
+}
+}
+
+
+
+
+
 
         function playAudio() { 
             x.play(); 
@@ -131,88 +195,6 @@ function wassup() {
 
         function secd() {
             x.currentTime += 30
-        }
-
-        function next(){
-            nxt++;
-            x.setAttribute('src','Music/Music1.mp3');
-           cnt=  1;
-          
-            if(nxt==1){
-                x.play();
-                y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://images.hungama.com/c/1/219/c7e/95296825/95296825_300x300.jpg)";
-            n.innerText="Apna Bana Le";
-            a.innerText="Arijit Singh";
-            document.title="Apna Bana Le - Arijit Singh";
-            
-         
-            }  
-         
-         else if (nxt==2){
-          
-            nxt++;
-            x.setAttribute('src','Music/Music2.mp3');
-           x.play();
-           y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
-            n.innerText="Dandelions";
-            a.innerText="Ruth B";
-            document.title="Dandelions - Ruth B";
-            
-            
-         }
-         else if (nxt==4){
-            
-            x.setAttribute('src','Music/Music.mp3');
-           x.play();
-           y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
-            n.innerText="Happier Than Ever";
-            a.innerText="Billi Eilish";
-           nxt=0;
-           document.title="Happier Than Ever - Billi Eilish";
-         }
-        }
-
-        function prv(){
-            if (prev==0){
-                prev++;
-            x.setAttribute('src','Music/Music2.mp3');
-           x.play();
-           y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
-            n.innerText="Dandelions";
-            a.innerText="Ruth B";
-            document.title="Dandelions - Ruth B";
-            }
-
-            else if(prev==1){
-            x.setAttribute('src','Music/Music1.mp3');
-            prev++;
-           cnt=  1;
-                x.play();
-                y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://images.hungama.com/c/1/219/c7e/95296825/95296825_300x300.jpg)";
-            n.innerText="Apna Bana Le";
-            a.innerText="Arijit Singh";
-            document.title="Apna Bana Le - Arijit Singh";
-            }
-            else if(prev==2)
-            {
-                x.setAttribute('src','Music/Music.mp3');
-           x.play();
-           y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://i.pinimg.com/564x/3b/a8/31/3ba831916692f90d6d043d943a930f8d.jpg)";
-            n.innerText="Happier Than Ever";
-            a.innerText="Billi Eilish";
-            document.title="Happier Than Ever - Billi Eilish";
-            
-           prev=0;
-
-            }
-           
-            
         }
 
 z.max  = x.duration;        // Set max value when you know the duration
