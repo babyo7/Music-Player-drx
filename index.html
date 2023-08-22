@@ -15,7 +15,7 @@
     <div class="box" style="visibility: hidden;" id="box">
         <nav>
             <div class="outer">
-        <div class="circle">       
+        <div class="circle shine" id="circle">       
         </div>
         </div>
         <div class="heading">
@@ -28,7 +28,7 @@
 
      </nav>
 
-     <div class="music" id="mus" style="visibility: hidden;" >
+     <div class="music shine" id="mus" style="visibility: hidden;" >
         <div id="playlist" class="p"  style="visibility: hidden;">
             <button id="Billi">Happier Than Ever - Billi Eilish</button>
             <button id="Arijit">Apna Bana Le - Arijit Singh</button>
@@ -60,7 +60,15 @@
    
    <script>
         
+window.onload = () => kill();
 
+
+
+function kill(){
+
+    document.getElementById("mus").classList.remove("shine");
+    document.getElementById("circle").classList.remove("shine");
+}
       
         var cnt = 0;
         var nxt = 0;
@@ -230,31 +238,7 @@ function billie() {
             a.innerText="Billi Eilish";
             document.title="Happier Than Ever - Billi Eilish";
 }
-function ruthe(){
-    
-    
-    x.setAttribute('src','Music/Music2.mp3');
-           x.play();
-           y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707)";
-            n.innerText="Dandelions";
-            a.innerText="Ruth B";
-            document.title="Dandelions - Ruth B";
-}
 
-function arijite(){
-    
-    
-    x.setAttribute('src','Music/Music1.mp3');
-    x.play();
-                y.className="fa-solid fa-pause";
-            m.style.backgroundImage = "url(https://images.hungama.com/c/1/219/c7e/95296825/95296825_300x300.jpg)";
-            n.innerText="Apna Bana Le";
-            a.innerText="Arijit Singh";
-            document.title="Apna Bana Le - Arijit Singh";
-            
-
-}
 
 function hiddee(){
 
@@ -271,8 +255,13 @@ x.onplay= () =>   y.className="fa-solid fa-pause";
 
 
 billi.onclick = () =>  billie();
-arijit.onclick = () => arijite();
-ruth.onclick = () => ruthe();
+arijit.onclick = () => {nxt=1; 
+songs();} 
+ruth.onclick = () => {
+
+    nxt=2;
+    songs();
+}
 
 
 
