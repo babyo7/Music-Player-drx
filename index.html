@@ -181,7 +181,9 @@ function wassup() {
        
 
         function prv(){
-            if (prev==0){
+            
+            prev++;
+            if (prev==1){
                 prev++;
             x.setAttribute('src','Music/Music2.mp3');
            x.play();
@@ -192,7 +194,7 @@ function wassup() {
             document.title="Dandelions - Ruth B";
             }
 
-            else if(prev==1){
+            else if(prev==2){
             x.setAttribute('src','Music/Music1.mp3');
             prev++;
            cnt=  1;
@@ -203,7 +205,7 @@ function wassup() {
             a.innerText="Arijit Singh";
             document.title="Apna Bana Le - Arijit Singh";
             }
-            else if(prev==2)
+            else if(prev==4)
             {
                 x.setAttribute('src','Music/Music.mp3');
            x.play();
