@@ -5,6 +5,7 @@
         scrollbar-width: none;
 
 
+
 }
 
 body{
@@ -246,7 +247,7 @@ h1{
 
 
     #playlists{
-        overflow: scroll;
+        
         height: 90%;
         width: 100%;
         padding-top: 20px;
@@ -257,6 +258,7 @@ h1{
 -moz-filter: blur(100%);
 -ms-filter: blur(100%);
 filter: blur(100%);
+
     }
    
     #playlists button:hover{
