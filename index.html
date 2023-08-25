@@ -21,6 +21,7 @@
             <button id="Happy">Ridezzz - By Happy</button>
             <button id="mgmt">MGMT - Little Dark Age - by Happy</button>
             <button id="Github">View Code - Github</button>
+            <button id="game">Download Game</button>
             <button id="close">Close</button>
     
         </div>
@@ -112,11 +113,16 @@ document.getElementById("circle").onclick = () => window.location.href="https://
         var hide=  document.getElementById("hide");
         var happy=  document.getElementById("Happy");
         var github=  document.getElementById("Github");
-               var mgmt = document.getElementById("mgmt");
+               
+              var game =  document.getElementById("game");
+              var mgmt = document.getElementById("mgmt");
        mgmt.onclick =() => window.open("https://mgmt-by-happy.vercel.app");
       
 
         github.onclick = () =>  window.open("https://github.com/babyo7/Music-Player");
+game.onclick = () =>  window.open("https://cdn.buymeacoffee.com/uploads/rewards/2023-08-25/2/183903_The_Game.zip");
+
+
 
         var mobile = window.matchMedia("(max-width: 800px)")
 myFunction(mobile) // Call listener function at run time
