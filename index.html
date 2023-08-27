@@ -411,7 +411,95 @@ ruth.onclick = () => {
 }
 
 
+       
+var dark=0
+document.getElementById("body").ondblclick=()=>{
+    dark++
+darke();
+console.log(dark)   
+}
 
+
+function darke(){
+    switch(dark){
+ case 1:
+    body.style.backgroundColor="#000000"
+     document.getElementById("box").style.backgroundColor="black";
+     document.getElementById("playlists").style.backgroundColor="black";
+   
+     document.getElementById("box").style.color="white";
+
+     document.getElementById("shareBtn").style.filter="invert(100%)";
+ 
+     document.getElementById("box").style.boxShadow="0 0px 7px 0 #272829, 0 0px 7px 0 #272829";
+     document.getElementById("mus").style.border="solid 0px white";
+     document.getElementById("mus").style.boxShadow="0 0px 3px 0 #D8D9DA, 0 0px 3px 0 #D8D9DA";
+
+     
+     document.getElementById("btn1").style.backgroundColor="white";
+     document.getElementById("btn2").style.backgroundColor="white";
+     document.getElementById("btn3").style.backgroundColor="white";
+   
+     
+     document.getElementById("btn1").style.color="black";
+     document.getElementById("btn2").style.color="black";
+     document.getElementById("btn3").style.color="black";
+
+
+
+   
+
+
+
+
+     document.getElementById("babez").style.color="white";
+     document.getElementById("Happy").style.color="white";
+     document.getElementById("mgmt").style.color="white";
+     document.getElementById("chill").style.color="white";
+     document.getElementById("Github").style.color="white";
+     document.getElementById("close").style.color="white";
+
+     
+       break;
+
+  default:
+  dark=0
+  body.style.backgroundColor="antiquewhite";
+     document.getElementById("box").style.backgroundColor="white";
+     document.getElementById("box").style.color="black";
+
+     document.getElementById("shareBtn").style.filter="none";
+     
+     document.getElementById("box").style.boxShadow="0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+     document.getElementById("mus").style.border="solid 0px white"
+     document.getElementById("mus").style.boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+     document.getElementById("btn1").style.backgroundColor=" rgba(255, 228, 196, 0.462)";
+     document.getElementById("btn2").style.backgroundColor=" rgba(255, 228, 196, 0.462)";
+     document.getElementById("btn3").style.backgroundColor=" rgba(255, 228, 196, 0.462)";
+     document.getElementById("playlists").style.backgroundColor="white";
+     document.getElementById("btn1").style.color="black";
+     document.getElementById("btn2").style.color="black";
+     document.getElementById("btn3").style.color="black";
+  
+     document.getElementById("babez").style.color="black";
+     document.getElementById("Happy").style.color="black";
+     document.getElementById("mgmt").style.color="black";
+     document.getElementById("chill").style.color="black";
+     document.getElementById("Github").style.color="black";
+     document.getElementById("close").style.color="black";
+     
+
+
+     document.getElementById("btn1").style.boxShadow="  0 4px 8px 0 rgba(0, 0, 0, 0.049), 0 6px 20px 0 rgba(2, 0, 0, 0.189)";
+     document.getElementById("btn2").style.boxShadow="  0 4px 8px 0 rgba(0, 0, 0, 0.049), 0 6px 20px 0 rgba(2, 0, 0, 0.189)";
+     document.getElementById("btn3").style.boxShadow="  0 4px 8px 0 rgba(0, 0, 0, 0.049), 0 6px 20px 0 rgba(2, 0, 0, 0.189)";
+     
+
+}
+}
+
+
+       
 const shareBtn = document.getElementById('shareBtn')
 
 shareBtn.addEventListener('click', event => {
