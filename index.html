@@ -147,6 +147,8 @@ happy.onclick = ()=> window.open("https://happy-music.vercel.app");
 }
 
 
+
+
         users=0;
         baby.onclick = ()=>{
             users++;
@@ -261,6 +263,14 @@ console.log(nxt);
 }
 
 
+navigator.mediaSession.setActionHandler('previoustrack', () => {
+    // Whatever you need to do to play the previous track.
+prv();
+});
+navigator.mediaSession.setActionHandler('nexttrack', () => {
+    tests();
+    // Whatever you need to do to play the next track.
+});
 
 function songs(){
 
